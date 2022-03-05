@@ -10,11 +10,28 @@
     "Triangle",
     "Levi9"
   ],
-  "author": "Dusan Malusev <malusevd99@gmail.com>",
+  "authors": [
+    {
+      "name": "Jaksa Malisic",
+      "email": "jaksa.malisic@gmail.com"
+    },
+    {
+      "name": "Dusan Mitrovic",
+      "email": "dusan1134@gmail.com"
+    },
+    {
+      "name": "Dusan Malusev",
+      "email": "malusevd99@gmail.com"
+    },
+    {
+      "name": "Stefan Bogdanovic",
+      "email": "bogdanovicstefan1997@gmail.com"
+    }
+  ],
   "license": "GPL-3.0",
   "devDependencies": {
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0"
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6"
   },
   "scripts": {
     "dev": "vite",
