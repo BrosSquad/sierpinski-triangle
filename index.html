@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FON Hakaton Levi9 Sierpinski Triangle</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    main {
+      width: 100%;
+      height: 95%;
+      display: flex;
+      justify-content: center;
+    }
+
+    canvas {
+      width: 80%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <input type=number id="depth" name="depth" max="12" min="1" placeholder="Sierpinski Triangle Depth" value="5" />
+    <p>Number of Triangles <span id="trianges"></span></p>
+  </header>
+
+  <main>
+    <canvas id="sierpinski-triangle"></canvas>
+  </main>
+
+  <script defer type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

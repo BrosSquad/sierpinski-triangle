@@ -1,0 +1,24 @@
+{
+  "name": "fon-hakaton-test",
+  "version": "1.0.0",
+  "description": "FON Hakaton Levi9 Sierpinski Triangle Test",
+  "main": "main.js",
+  "keywords": [
+    "FON",
+    "Hakaton",
+    "Sierpinski",
+    "Triangle",
+    "Levi9"
+  ],
+  "author": "Dusan Malusev <malusevd99@gmail.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  }
+}
