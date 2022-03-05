@@ -22,11 +22,10 @@ export class Triangle {
             ctx.lineWidth = 10;
 
             ctx.beginPath();
-            ctx.moveTo(item.x, item.y); // go to left vertex
-            // note that (0,0) in canvas is the top left, so 'up' on the vertical component would use substraction.
+            ctx.moveTo(item.x, item.y);
             ctx.lineTo(item.x + item.size / 2, item.y - item.size * Math.sin(Math.PI / 3)); // draw line from left vertex to top vertex
-            ctx.lineTo(item.x + item.size, item.y); // draw line from top vertex to right vertex
-            ctx.lineTo(item.x, item.y); // draw line from right vertex back to left vertex
+            ctx.lineTo(item.x + item.size, item.y);
+            ctx.lineTo(item.x, item.y);
             ctx.closePath();
             ctx.stroke();
         }

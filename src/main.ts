@@ -1,4 +1,4 @@
-import createSierpinskiTriangle from "./sierpinski";
+import draw from "./sierpinski";
 import { Vector } from "./types";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -51,5 +51,5 @@ function clearCanvas(ctx: CanvasRenderingContext2D) {
 function drawSierpinskiTriange(ctx: CanvasRenderingContext2D, startingPosition: Vector, depth: number) {
   clearCanvas(ctx);
 
-  createSierpinskiTriangle(ctx, startingPosition, depth);
+  draw(ctx, startingPosition, depth);
 }
