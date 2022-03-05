@@ -23,7 +23,7 @@ export class Triangle {
 
             ctx.beginPath();
             ctx.moveTo(item.x, item.y);
-            ctx.lineTo(item.x + item.size / 2, item.y - item.size * Math.sin(Math.PI / 3)); // draw line from left vertex to top vertex
+            ctx.lineTo(item.x + item.size / 2, item.y - item.size * Math.sin(Math.PI / 3));
             ctx.lineTo(item.x + item.size, item.y);
             ctx.lineTo(item.x, item.y);
             ctx.closePath();
