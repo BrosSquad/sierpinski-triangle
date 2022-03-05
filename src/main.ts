@@ -12,15 +12,9 @@ const CANVAS_HEIGHT = 3000;
 function main() {
   const canvas = document.querySelector<HTMLCanvasElement>('#sierpinski-triangle');
   const depthInputElement = document.querySelector<HTMLInputElement>('input[type=number]');
-  const numberOfTrianglesElement = document.querySelector<HTMLSpanElement>('#trianges');
 
   if (canvas === null) {
     console.error('Canvas is not found');
-    return;
-  }
-
-  if (numberOfTrianglesElement === null) {
-    console.error('Span for `Number of triangles` is not found');
     return;
   }
 
@@ -43,24 +37,19 @@ function main() {
 
     depthInputElement.addEventListener('input', ({ target }) => {
       depth = parseInt((target as HTMLInputElement).value, 10) | 0;
-      drawSierpinskiTriange(ctx, startingPosition, numberOfTrianglesElement, depth);
+      drawSierpinskiTriange(ctx, startingPosition, depth);
     });
   }
 
-  drawSierpinskiTriange(ctx, startingPosition, numberOfTrianglesElement, depth);
-}
-
-function displayNumberOfTriangles(el: HTMLElement, depth: number) {
-  el.innerText = (Math.pow(3, depth) | 0).toString();
+  drawSierpinskiTriange(ctx, startingPosition, depth);
 }
 
 function clearCanvas(ctx: CanvasRenderingContext2D) {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
 
-function drawSierpinskiTriange(ctx: CanvasRenderingContext2D, startingPosition: Vector, numberOfTrianglesElement: HTMLElement, depth: number) {
+function drawSierpinskiTriange(ctx: CanvasRenderingContext2D, startingPosition: Vector, depth: number) {
   clearCanvas(ctx);
 
-  displayNumberOfTriangles(numberOfTrianglesElement, depth);
   createSierpinskiTriangle(ctx, startingPosition, depth);
 }
